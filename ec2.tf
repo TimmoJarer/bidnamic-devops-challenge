@@ -29,7 +29,7 @@ resource "aws_instance" "webApp" {
             "sudo systemctl start docker",
             "sudo yum install -y git",
             "cd /opt",
-            "sudo git clone https://github.com/bidnamic/bidnamic-devops-challenge"
+            "sudo git clone https://github.com/TimmoJarer/bidnamic-devops-challenge.git"
 
 ]
 }   
