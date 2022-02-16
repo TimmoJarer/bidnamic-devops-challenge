@@ -1,0 +1,4 @@
+.terraform*
+*.tfstat*
+*.pem
+*.pub
