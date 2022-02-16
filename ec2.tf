@@ -25,8 +25,9 @@ resource "aws_instance" "webApp" {
             "sudo yum install -y git",
             "cd /opt",
             "sudo git clone https://github.com/TimmoJarer/bidnamic-devops-challenge.git",
+            "cd bidnamic-devops-challenge",
             "sudo docker build -t webapp .",
-            "sudo docker run -it -p 80:5000"
+            "sudo docker run -it -p 80:5000 webapp"
 
 ]
 }   
