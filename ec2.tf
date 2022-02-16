@@ -17,11 +17,6 @@ resource "aws_instance" "webApp" {
 
      provisioner "remote-exec" {
         
-       /* command = "sudo yum install -y yum-utils"
-        command = "sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo"
-        command = "sudo yum install -y docker-ce docker-ce-cli containerd.io"
-        */
-        
         inline = [
             "sudo yum install -y yum-utils",
             "sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo",
@@ -29,7 +24,9 @@ resource "aws_instance" "webApp" {
             "sudo systemctl start docker",
             "sudo yum install -y git",
             "cd /opt",
-            "sudo git clone https://github.com/TimmoJarer/bidnamic-devops-challenge.git"
+            "sudo git clone https://github.com/TimmoJarer/bidnamic-devops-challenge.git",
+            "sudo docker build -t webapp .",
+            "sudo docker run -it -p 80:5000"
 
 ]
 }   
