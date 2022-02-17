@@ -5,8 +5,10 @@ variable "region" {
 
 variable "VPCID" {
     type = string
-    default = "vpc-02edec435f65e9245" 
+    default = "" 
 }
+
+#RHEL8
 
 variable "AMI_ID" {
     type = string
