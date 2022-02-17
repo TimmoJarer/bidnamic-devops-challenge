@@ -17,10 +17,12 @@ Please follow the instructions below to deploy this app:
   
   export AWS_SECRET_ACCESS_KEY="asecretkey"
   
-4)Initialize terraform using:
+4)In variables.tf, insert your chosen region, VPC ID, and AMI ID in the appropriate variable.
+  
+5)Initialize terraform using:
 
   terraform init
   
-5)Deploy app with:
+6)Deploy app with:
 
   terraform apply
