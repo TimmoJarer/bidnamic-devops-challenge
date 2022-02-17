@@ -25,4 +25,4 @@ Please follow the instructions below to deploy this app:
   
 6)Deploy app with:
 
-  terraform apply
+  terraform apply --auto-approve
